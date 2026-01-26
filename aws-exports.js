@@ -25,6 +25,20 @@ const awsmobile = {
     },
     "aws_cognito_verification_mechanisms": [
         "EMAIL"
+    ],
+    "aws_cloud_logic_custom": [
+        {
+            "name": "userHandler",
+            "endpoint": "https://yureo545j8.execute-api.ap-south-1.amazonaws.com/dev",
+            "region": "ap-south-1"
+        }
+    ],
+    "aws_dynamodb_all_tables_region": "ap-south-1",
+    "aws_dynamodb_table_schemas": [
+        {
+            "tableName": "users-dev",
+            "region": "ap-south-1"
+        }
     ]
 };
 

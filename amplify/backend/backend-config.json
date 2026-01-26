@@ -1,4 +1,20 @@
 {
+  "api": {
+    "userHandler": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "userHandler"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
     "ampnxtapp11d461555": {
       "customAuth": false,
@@ -25,6 +41,37 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "function": {
+    "userHandler": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_userHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "userHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_userHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "userHandler"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "usertable": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
     }
   }
 }

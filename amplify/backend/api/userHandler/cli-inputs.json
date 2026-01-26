@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "paths": {
+    "/users": {
+      "name": "/users",
+      "lambdaFunction": "userHandler",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "update",
+          "delete"
+        ]
+      }
+    }
+  }
+}
